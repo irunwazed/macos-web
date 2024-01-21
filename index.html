@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macbook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-red-50 bg-[url('peakpx.jpg')]  bg-no-repeat bg-cover">
+
+  <div id="menubar" class=" top-0 bg-black/40 text-sm font-light text-white w-full grid grid-cols-2 p-1 px-3">
+    <div class="flex gap-3">
+      <div class="px-3">img</div>
+      <div class="font-medium">Finder</div>
+      <div class="">File</div>
+      <div class="">Edit</div>
+      <div class="">View</div>
+      <div class="">Windows</div>
+      <div class="">Help</div>
+    </div>
+    <div>
+      <div class="float-right">
+        <div>turn</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- screen -->
+  <div class=" ">
+    <div class="w-full min-h-[600px]"></div>
+  </div>
+
+
+  <!-- terminal -->
+  <div id="terminal" class="rounded-2xl absolute left-10 right-0 top-10 bottom-0 m-auto ">
+    <div class="w-[600px] rounded-md shadow-md">
+      <div id="terminal-header" class="p-1 text-sm bg-slate-900/80 text-white rounded-t-md">
+        <div class="flex p-[2px]">
+          <div class="h-[16px] w-[16px] text-black bg-red-500 rounded-full  flex items-center justify-center">
+            <i class="fa-sharp fa-solid fa-xmark text-sm relative " style="font-size: 12px;"></i>
+          </div>
+
+          <div class="ml-1 h-[16px] w-[16px] text-black bg-yellow-500 rounded-full  flex items-center justify-center">
+            <i class="fa-sharp fa-solid fa-minus text-sm relative " style="font-size: 12px;"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bg-black/45 p-2 h-96 rounded-b-md">
+        <div class="flex gap-1 text-green-500 text-sm">
+          <div class="text-green-500">
+            root@aka
+          </div>
+          <div class="w-full flex">
+            <span>:</span>
+            <form id="terminal-form" action="" method="get"> <input type="text"
+                class="w-full bg-transparent px-2 focus:right-0 focus:outline-none"></form>
+          </div>
+        </div>
+        <div id="terminal-content" class="text-green-500 text-sm mt-1">
+          <div id="terminal-loading" class="hidden">
+            <span>Loading</span>
+            <div class=" mt-2 ml-2 h-2 w-2 bg-green-500 rounded-full animate-bounce duration-300 transition-all"></div>
+            <div class=" mt-2 ml-1 h-2 w-2 bg-green-500 rounded-full animate-bounce duration-300 transition-all"></div>
+            <div class=" mt-2 ml-1 h-2 w-2 bg-green-500 rounded-full animate-bounce duration-300 transition-all"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="fixed bottom-2  w-full">
+    <div class=" flex justify-center ">
+      <div
+        class="flex items-end bg-slate-200/10 px-3 pt-1 pb-2 max-h-[63px] rounded-2xl border-solid border-gray-50/40 border-[1px]">
+        <div onmouseover="hoverDock(1)" onmouseout="unHoverDock(1)" class="px-1">
+          <div id="dock-1" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(2)" onmouseout="unHoverDock(2)" class="px-1 rounded-2xl">
+          <div id="dock-2" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(3)" onmouseout="unHoverDock(3)" class="px-1 rounded-2xl">
+          <div id="dock-3" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(4)" onmouseout="unHoverDock(4)" class="px-1 rounded-2xl">
+          <div id="dock-4" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(5)" onmouseout="unHoverDock(5)" class="px-1 rounded-2xl">
+          <div id="dock-5" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(6)" onmouseout="unHoverDock(6)" class="px-1 rounded-2xl">
+          <div id="dock-6" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(7)" onmouseout="unHoverDock(7)" class="px-1 rounded-2xl">
+          <div id="dock-7" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+        <div onmouseover="hoverDock(8)" onmouseout="unHoverDock(8)" class="px-1 rounded-2xl">
+          <div id="dock-8" class="w-[50px] h-[50px] bg-red-400 rounded-2xl duration-200 transition-all"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
+  <script>
+    
+    let onAjax = false;
+    function isTerminalLoading(isLoading = true) {
+
+      let element = $('#terminal-loading');
+      if (isLoading == true) {
+        element.removeClass('hidden');
+        element.addClass('flex');
+      } else {
+        element.removeClass('flex');
+        element.addClass('hidden');
+      }
+
+    }
+
+    function terminalWrite(){
+      $.get('log.txt', function (data) {
+            console.log(data)
+            $('#terminal-content').append(data.replace(/\n/g, "<br />"))
+          }, 'text');
+    }
+
+    $('#terminal-form').submit(e => {
+      e.preventDefault();
+      isTerminalLoading(true);
+      onAjax = true;
+      $.ajax({
+        async: true,
+        url: "http://127.0.0.1:9000/terminal",
+        type: "POST",
+        data: {
+          id: 1,
+        },
+        processData: false,
+        success: function (response) {
+          // document.getElementById("total_items").value = response;
+          // document.getElementById("disp").innerHTML = response;
+
+          console.log('response', response)
+          
+          terminalWrite();
+          onAjax = false;
+          isTerminalLoading(false);
+        },
+        error: function () {
+          isTerminalLoading(false);
+          // terminalWrite();
+          onAjax = false;
+          // alert("error");
+        },
+        // xhr: function () {
+        //   // get the native XmlHttpRequest object
+          
+        //   var xhr = new window.XMLHttpRequest();
+        //   console.log("xhr", xhr)
+        //   // set the onprogress event handler
+        //   xhr.upload.onprogress = function (evt) { console.log('progress', evt.loaded / evt.total * 100) };
+        //   // set the onload event handler
+        //   xhr.upload.onload = function () { console.log('DONE!') };
+        //   // return the customized object
+        //   return xhr;
+        // }
+      });
+      timeout();
+      // while(onAjax){
+      //   console.log("tes")
+      // }
+    })
+
+    const timeout = () => setTimeout(()=>{if(onAjax){console.log('tes'); timeout(); }}, 5000)
+
+
+    function hoverDock(id) {
+      console.log('hover');
+
+      $('#dock-' + (id - 2)).removeClass('w-[50px] h-[50px]')
+      $('#dock-' + (id - 1)).removeClass('w-[50px] h-[50px]')
+      $('#dock-' + (id)).removeClass('w-[50px] h-[50px]')
+      $('#dock-' + (id + 1)).removeClass('w-[50px] h-[50px]')
+      $('#dock-' + (id + 2)).removeClass('w-[50px] h-[50px]')
+
+      $('#dock-' + (id - 2)).addClass('w-[60px] h-[60px] -translate-y-[3px] px-[9px]')
+      $('#dock-' + (id - 1)).addClass('w-[80px] h-[80px] -translate-y-[8px] px-[9px]')
+      $('#dock-' + id).addClass('w-[100px] h-[100px] -translate-y-[13px] px-[9px]')
+      $('#dock-' + (id + 1)).addClass('w-[80px] h-[80px] -translate-y-[8px] px-[9px]')
+      $('#dock-' + (id + 2)).addClass('w-[60px] h-[60px] -translate-y-[3px] px-[9px]')
+    }
+    function unHoverDock(id) {
+      console.log('unhover');
+
+
+      $('#dock-' + (id - 2)).removeClass('w-[60px] h-[60px] -translate-y-[3px] px-[9px]')
+      $('#dock-' + (id - 1)).removeClass('w-[80px] h-[80px] -translate-y-[8px] px-[9px]')
+      $('#dock-' + id).removeClass('w-[100px] h-[100px] -translate-y-[13px] px-[9px]')
+      $('#dock-' + (id + 1)).removeClass('w-[80px] h-[80px] -translate-y-[8px] px-[9px]')
+      $('#dock-' + (id + 2)).removeClass('w-[60px] h-[60px] -translate-y-[3px] px-[9px]')
+
+      $('#dock-' + (id - 2)).addClass('w-[50px] h-[50px]')
+      $('#dock-' + (id - 1)).addClass('w-[50px] h-[50px]')
+      $('#dock-' + (id)).addClass('w-[50px] h-[50px]')
+      $('#dock-' + (id + 1)).addClass('w-[50px] h-[50px]')
+      $('#dock-' + (id + 2)).addClass('w-[50px] h-[50px]')
+
+
+    }
+
+    let isMouseDown = false;
+    let offsetX = 0;
+    let offsetY = 0;
+    $('#terminal-header').mousedown(e => {
+      isMouseDown = true;
+      offsetX = $('#terminal').offset().left - e.clientX;
+      offsetY = $('#terminal').offset().top - e.clientY;
+    })
+
+    document.addEventListener('mouseup', () => {
+      isMouseDown = false;
+    })
+
+    document.addEventListener('mousemove', e => {
+      if (!isMouseDown) return;
+      e.preventDefault();
+      let left = offsetX + e.clientX;
+      let top = offsetY + e.clientY;
+      if (top <= $('#menubar').height()) {
+        return;
+      }
+      $('#terminal').css({ 'left': (left) + 'px', 'top': (top) + 'px' });
+    })
+
+
+
+  </script>
+
+</body>
+
+</html>
